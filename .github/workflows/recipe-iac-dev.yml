@@ -12,7 +12,7 @@ jobs:
 
       # Lint Bicep code 
     - name: Run Bicep linter
-      run: az bicep build --file .iac-recipe-main/main.bicep
+      run: az bicep build --file ./main.bicep
 
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
