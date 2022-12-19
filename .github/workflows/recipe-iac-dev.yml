@@ -12,7 +12,7 @@ jobs:
 
       # Lint Bicep code 
     - name: Run Bicep linter
-      run: az bicep build --file ./main.bicep
+      run: az bicep build --file ./iac-recipe-main/main.bicep
 
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
@@ -37,7 +37,7 @@ jobs:
       with:
         subscriptionId: da6b2fc6-ac6d-4f7f-b1d2-068855c974aa
         resourceGroupName: jseijas_students_1
-        template: ./main.bicep
+        template: ./iac-recipe-main/main.bicep
         parameters: dev.parameters.json dbuser=${{ secrets.DBUSER }} dbhost=${{ secrets.DBHOST }} dbpass=${{ secrets.DBPASS }} dbname=${{ secrets.DBNAMEdev }}
         failOnStdErr: false
 
@@ -64,6 +64,6 @@ jobs:
       with:
         subscriptionId: da6b2fc6-ac6d-4f7f-b1d2-068855c974aa
         resourceGroupName: jseijas_students_1
-        template: ./main.bicep
+        template: ./iac-recipe-main/main.bicep
         parameters: prod.parameters.json dbuser=${{ secrets.DBUSER }} dbhost=${{ secrets.DBHOST }} dbpass=${{ secrets.DBPASS }} dbname=${{ secrets.DBNAMEprod }}
         failOnStdErr: false
