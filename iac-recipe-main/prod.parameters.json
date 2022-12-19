@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServiceAppName1": {
+            "value": "idoukkali-assignment-app-BE-prod-bicep"
+        },
+        "appServiceAppName2": {
+            "value": "idoukkali-assignment-app-FE-prod-bicep"
+        },
+        "appServicePlanName": {
+            "value": "idoukkali-assignment-ASP-prod-bicep"
+        },
+        "storageAccountName": {
+            "value": "idoukkaliprodstorage"
+        },
+        "environmentType": {
+            "value": "prod"
+        }
+    }
+}
